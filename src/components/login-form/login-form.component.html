@@ -1,0 +1,18 @@
+<div>
+  <form (submit)="handleSubmit()">
+    <label>Username</label>
+    <input type="email"
+           [(ngModel)]="signIn.username"
+           name="username" />
+
+    <label>Password</label>
+    <input type="password"
+           [(ngModel)]="signIn.password"
+           name="password" />
+    <input type="submit" />
+  </form>
+
+  <div *ngIf="errorMessage != null">
+    <p>{{errorMessage}}</p>
+  </div>
+</div>
